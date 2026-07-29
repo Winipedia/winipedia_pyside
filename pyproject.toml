@@ -1,6 +1,6 @@
 [project]
 name = "winipyside"
-version = "4.14.9"
+version = "4.14.11"
 description = "A utilities package for PySide6"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
@@ -54,7 +54,6 @@ dev = [
   "mkdocs-material>=9.7.6",
   "mkdocs-mermaid2-plugin>=1.2.3",
   "mkdocstrings[python]>=1.0.5",
-  "pip-audit>=2.10.1",
   "pre-commit-hooks",
   "prek>=0.4.8",
   "pyrig>=18.3.4",
