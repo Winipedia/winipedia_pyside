@@ -1,6 +1,6 @@
 [project]
 name = "winipyside"
-version = "4.14.14"
+version = "4.14.15"
 description = "A utilities package for PySide6"
 readme = "README.md"
 requires-python = ">=3.12,<3.14"
@@ -9,10 +9,10 @@ license-files = [
   "LICENSE",
 ]
 authors = [
-  { name = "Winipedia" },
+  { name = "Winipedia", email = "winipedia@gmx.de" },
 ]
 maintainers = [
-  { name = "Winipedia" },
+  { name = "Winipedia", email = "winipedia@gmx.de" },
 ]
 keywords = [
   "pyrig",
@@ -78,7 +78,6 @@ dev = [
 [build-system]
 requires = [
   "uv-build",
-  "uv_build",
 ]
 build-backend = "uv_build"
 
