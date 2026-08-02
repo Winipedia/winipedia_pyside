@@ -60,7 +60,7 @@ Add a button to the menu for navigating to a specific page.
 
 **Parameters:**
 
-- `page_cls` (type[Base]): The page class to navigate to
+- `page_cls` (`type[Base]`): The page class to navigate to
 - `menu` (QMenu): The menu to add the button to
 
 ### Example
@@ -161,7 +161,7 @@ Play a file from a function that returns the path.
 
 **Parameters:**
 
-- `func` (Callable[[], Path]): Function that returns the file path
+- `func` (`Callable[[], Path]`): Function that returns the file path
 - `position` (int): Starting position in milliseconds (default: 0)
 
 ### Example

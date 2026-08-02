@@ -242,7 +242,7 @@ Convert a list of Qt cookies to Python cookies.
 
 **Parameters:**
 
-- `qcookies` (list[QNetworkCookie]): List of Qt cookies
+- `qcookies` (`list[QNetworkCookie]`): List of Qt cookies
 
 **Returns:**
 

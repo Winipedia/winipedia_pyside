@@ -137,7 +137,7 @@ Set the current page in the stacked widget.
 
 **Parameters:**
 
-- `page_cls` (type[BasePage]): The page class to set as current
+- `page_cls` (`type[BasePage]`): The page class to set as current
 
 **Example:**
 
@@ -154,7 +154,7 @@ Get a page instance by its class.
 
 **Parameters:**
 
-- `page_cls` (type[BasePage]): The page class to retrieve
+- `page_cls` (`type[BasePage]`): The page class to retrieve
 
 **Returns:**
 
