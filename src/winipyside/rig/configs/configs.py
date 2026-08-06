@@ -74,17 +74,13 @@ class HealthCheckWorkflowConfigFile(
     environment.
     """
 
-    def step_run_tests(
-        self,
-        *,
-        step: dict[str, Any] | None = None,
-    ) -> dict[str, Any]:
+    def step_run_tests(self) -> dict[str, Any]:
         """Get the pre-commit step.
 
         We need to add some env vars
         so QtWebEngine doesn't try to use GPU acceleration etc.
         """
-        step = super().step_run_tests(step=step)
+        step = super().step_run_tests()
         step.setdefault("env", {}).update(
             {
                 "QT_QPA_PLATFORM": "offscreen",
