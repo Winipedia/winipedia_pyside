@@ -1410,7 +1410,7 @@ wheels = [
 
 [[package]]
 name = "winipyside"
-version = "4.14.36"
+version = "4.14.37"
 source = { editable = "." }
 dependencies = [
     { name = "cryptography" },
