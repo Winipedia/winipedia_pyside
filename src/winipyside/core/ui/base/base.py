@@ -11,8 +11,8 @@ from typing import TYPE_CHECKING, Any, Self, cast
 from pyrig.core.resources import resource_path
 from pyrig.core.strings import split_on_uppercase
 from pyrig_runtime.core.introspection.classes import (
-    discard_parent_classes,
     discover_subclasses,
+    filter_leaf_classes,
 )
 from pyrig_runtime.core.introspection.packages import (
     is_package,
@@ -141,7 +141,7 @@ class Base(metaclass=QABCLoggingMeta):
         if is_package(package):
             register_package_modules(package)
 
-        children = discard_parent_classes(
+        children = filter_leaf_classes(
             discover_subclasses(cls),
         )
         return sorted(children, key=lambda cls: cls.__name__)
