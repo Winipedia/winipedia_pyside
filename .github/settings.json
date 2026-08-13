@@ -2,6 +2,7 @@
   "repository": {
     "name": "winipyside",
     "description": "A utilities package for PySide6",
+    "homepage": "https://Winipedia.github.io/winipyside",
     "default_branch": "main",
     "delete_branch_on_merge": true,
     "allow_update_branch": true,
