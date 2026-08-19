@@ -271,6 +271,9 @@ class MediaPlayer(QMediaPlayer):
         self.fullscreen_button.setIcon(self.fullscreen_icon)
 
         self.parent_widget = self.parent_layout.parentWidget()
+        if self.parent_widget is None:
+            msg = "no parent widget found"
+            raise RuntimeError(msg)
         self.other_visible_widgets = [
             w
             for w in set(self.parent_widget.findChildren(QWidget))
