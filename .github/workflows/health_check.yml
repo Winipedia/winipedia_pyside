@@ -27,6 +27,8 @@
         "name": "Checkout Repository"
         "id": "checkout-repository"
         "uses": "actions/checkout@main"
+        "with":
+          "persist-credentials": false
       -
         "name": "Setup Package Manager"
         "id": "setup-package-manager"
@@ -77,6 +79,8 @@
         "name": "Checkout Repository"
         "id": "checkout-repository"
         "uses": "actions/checkout@main"
+        "with":
+          "persist-credentials": false
       -
         "name": "Setup Package Manager"
         "id": "setup-package-manager"
