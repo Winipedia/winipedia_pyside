@@ -12,6 +12,10 @@
   "schedule":
     -
       "cron": "0 1 * * *"
+"permissions": {}
+"concurrency":
+  "group": "${{ github.workflow }}-${{ github.ref }}"
+  "cancel-in-progress": true
 "defaults":
   "run":
     "shell": "bash"
@@ -21,6 +25,9 @@
 "run-name": "Health Check"
 "jobs":
   "health-checks":
+    "name": "Health Checks"
+    "permissions":
+      "contents": "read"
     "runs-on": "ubuntu-latest"
     "steps":
       -
@@ -63,6 +70,9 @@
         "id": "run-version-control-hooks"
         "run": "uv run prek run --all-files --group=all"
   "matrix-health-checks":
+    "name": "Matrix Health Checks"
+    "permissions":
+      "contents": "read"
     "runs-on": "${{ matrix.os }}"
     "strategy":
       "matrix":
@@ -123,6 +133,7 @@
             --disable-software-rasterizer \
             --disable-dev-shm-usage
   "health-check":
+    "name": "Health Check"
     "needs":
       - "health-checks"
       - "matrix-health-checks"

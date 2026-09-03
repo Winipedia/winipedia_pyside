@@ -6,6 +6,10 @@
       - "completed"
     "workflows":
       - "Release"
+"permissions": {}
+"concurrency":
+  "group": "${{ github.workflow }}-${{ github.ref }}"
+  "cancel-in-progress": false
 "defaults":
   "run":
     "shell": "bash"
@@ -15,10 +19,12 @@
 "run-name": "Deploy"
 "jobs":
   "documentation":
-    "if": "github.event.workflow_run.conclusion == 'success'"
+    "name": "Documentation"
     "permissions":
+      "contents": "read"
       "id-token": "write"
       "pages": "write"
+    "if": "github.event.workflow_run.conclusion == 'success'"
     "runs-on": "ubuntu-latest"
     "steps":
       -
@@ -59,6 +65,9 @@
         "id": "deploy-documentation"
         "uses": "actions/deploy-pages@main"
   "package":
+    "name": "Package"
+    "permissions":
+      "contents": "read"
     "if": "github.event.workflow_run.conclusion == 'success'"
     "runs-on": "ubuntu-latest"
     "steps":
