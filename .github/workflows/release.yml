@@ -28,7 +28,6 @@
     "needs":
       - "health-check"
     "runs-on": "ubuntu-latest"
-    "environment": "publish"
     "steps":
       -
         "name": "Checkout Repository"
@@ -42,12 +41,6 @@
         "uses": "astral-sh/setup-uv@main"
         "with":
           "python-version": "3.13"
-      -
-        "name": "Configure Repository"
-        "id": "configure-repository"
-        "run": "bash .github/configure.sh"
-        "env":
-          "GH_TOKEN": "${{ secrets.REPO_TOKEN }}"
       -
         "name": "Create Release"
         "id": "create-release"
